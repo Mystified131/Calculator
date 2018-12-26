@@ -1,0 +1,36 @@
+﻿@model MVCApplication.ViewModels.IndexViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Calculator</h2>
+
+<form action='Home/Result' method='POST' align="left">
+    <div>
+        <label>
+            Please enter a value:
+        </label><br><br>
+        <input name="Value1" type="text" default = @ViewBag.calcnum value=@ViewBag.calcnum /><br /><br />
+    </div>
+    <br />
+    <div>
+        <label>
+            Please select an operation:
+        </label><br><br />
+        <input type="radio" name="Operation" value="+" checked="checked">+<br>
+        <input type="radio" name="Operation" value="-" >-<br>
+        <input type="radio" name="Operation" value="*">*<br>
+        <input type="radio" name="Operation" value="/">/<br>
+    </div>
+    <br />
+    <div>
+        <label>
+            Please enter a second value:
+        </label><br><br>
+        <input name="Value2" type="text" value="" /><br /><br />
+    </div>
+    <br /><br />
+    <input type="submit" value="Calculate Results" />
+
+</form>

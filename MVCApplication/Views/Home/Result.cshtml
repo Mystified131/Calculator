@@ -1,0 +1,19 @@
+﻿@model MVCApplication.ViewModels.ResultViewModel
+
+@{
+    ViewData["Title"] = "Result";
+}
+
+<h2>Result</h2>
+
+<br />
+
+<p>The result of the calculation would be: @Model.Result</p>
+
+<br />
+
+<div asp-validation-summary="All"></div><br />
+
+<p>@Model.Error</p><br />
+
+<p><a asp-controller="Home" asp-action="Index">Home Page</a></p>
